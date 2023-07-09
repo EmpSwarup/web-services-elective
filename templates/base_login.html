@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>SB Admin 2 - Login</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -25,13 +25,11 @@
 
     <!-- Custom styles for this template-->
     <link href="../static/css/sb-admin-2.min.css" rel="stylesheet" />
+    {% block css_block %} {% endblock %}
   </head>
 
   <body class="bg-gradient-primary">
-    <div class="container">
-      <!-- Outer Row -->
-      {% block content %} {% endblock %}
-    </div>
+    <div class="container">{% block body_block %} {% endblock %}</div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="../static/vendor/jquery/jquery.min.js"></script>
@@ -42,5 +40,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../static/js/sb-admin-2.min.js"></script>
+    {% block js_block %} {% endblock %}
   </body>
 </html>
